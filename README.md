@@ -1,6 +1,6 @@
 # Project VRoom by Studio 245 at Drexel University
 
-<img src="logo.jpg" alt="drawing" style="width:400px;"/>
+<img src="logo.jpg" alt="drawing" style="width:250px;"/>
 
 ## Object Prefabs
 Must be in `.FBX` format<br>
