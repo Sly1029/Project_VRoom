@@ -58,12 +58,14 @@ public class SpawnNotes : MonoBehaviour
     ReadVectors();
     }
 
-    void ReadVectors(){
+    public static  Vector3Data ReadVectors(){
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Directory.GetCurrentDirectory()+@"\assets\resources\notepossiblelocations.save", FileMode.Open);
         Vector3Data vec = (Vector3Data)bf.Deserialize(file);
         Debug.Log(vec.data[0]);
         file.Close();
+
+        return vec;
     }
 
 
