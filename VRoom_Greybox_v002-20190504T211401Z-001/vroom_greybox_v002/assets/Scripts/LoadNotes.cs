@@ -46,17 +46,23 @@ public class LoadNotes : MonoBehaviour
             var x = Resources.Load<AudioClip>("Music/"+n.file);
             Debug.Log(x);
             audio.clip = x;
+            try
+            {
+                if (n.path == 'r' || n.path == 'R')
+                {
+                    currentVector.x = currentVector.x + 5f;
+                }
+                else if (n.path == 'l' || n.path == 'L')
+                {
+                    currentVector.x = currentVector.x - 5f;
+                }
 
-            if (n.path == 'r' || n.path == 'R'){
-            currentVector.x = currentVector.x + 5f;
+
+                Instantiate(audio_prefab, currentVector, Quaternion.identity);
             }
-            else if (n.path == 'l' || n.path == 'L'){
-                currentVector.x = currentVector.x - 5f;
+            catch{
+
             }
-            
-
-            Instantiate(audio_prefab, currentVector, Quaternion.identity);
-
 
         }
 
