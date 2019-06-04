@@ -6,7 +6,7 @@ using UnityEngine;
 public class LoadNotes : MonoBehaviour
 {
     public GameObject prefabSpawn;
-
+    public int offset;
     // Start is called before the first frame update
 
     List<Vector3> locations;
@@ -15,8 +15,11 @@ public class LoadNotes : MonoBehaviour
     {
         notes = new List<Note>();
         locations = new List<Vector3>();
-        List<string> locations_strings= SpawnNotes.ReadVectors().data;
+        //Creates a list of location vectors in String format
+        List<string> locations_strings = SpawnNotes.ReadVectors().data;
+        //Converts to usable formats of Vector3s
         convert(locations_strings);
+        //
         LoadLocations();
         spawnNotes();
     }
@@ -37,31 +40,30 @@ public class LoadNotes : MonoBehaviour
 
     void spawnNotes(){
         Vector3 currentVector;
-        Debug.Log(notes[0].path);
         foreach (Note n in notes){
             currentVector = locations[(n.time/2)+1];
             GameObject audio_prefab = prefabSpawn;
             AudioSource audio = audio_prefab.GetComponent<AudioSource>();
-            
             var x = Resources.Load<AudioClip>("Music/"+n.file);
             Debug.Log(x);
             audio.clip = x;
             try
             {
+                currentVector.y += 0.5f;
                 if (n.path == 'r' || n.path == 'R')
                 {
-                    currentVector.x = currentVector.x + 5f;
+                    currentVector.z += offset;
                 }
                 else if (n.path == 'l' || n.path == 'L')
                 {
-                    currentVector.x = currentVector.x - 5f;
+                    currentVector.z -= offset;
                 }
 
 
                 Instantiate(audio_prefab, currentVector, Quaternion.identity);
             }
             catch{
-
+                Debug.Log("Error");
             }
 
         }
@@ -76,14 +78,16 @@ public class LoadNotes : MonoBehaviour
     void LoadLocations(){
         using(var reader = new StreamReader(Directory.GetCurrentDirectory() + @"\assets\resources\Note_Spawn.csv"))
         {
-            for ( int x = 0; x<2; x++){
+            while (!reader.EndOfStream) { 
               var line = reader.ReadLine();
               string [] values = line.Split(',');
               
             //Time parsing should not be needed later @TODO
               int time_value = int.Parse(values[0].Substring(2));
             if (!values[0].StartsWith("0")){
+            //Gets the seconds representation of the X:xx time format
               time_value+=60*int.Parse(values[0][0]+"");
+              Debug.Log(time_value);
             }
 
             notes.Add(new Note(time_value, values[1], values[2][0]));
