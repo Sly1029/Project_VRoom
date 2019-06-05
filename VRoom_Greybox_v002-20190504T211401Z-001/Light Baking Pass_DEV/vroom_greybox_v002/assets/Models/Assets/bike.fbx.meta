@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: a9e271d7f968e14439343c7fd3f74873
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bike_v02:Mesh
+    100004: bikeBack
+    100006: bikeCrystalCrate
+    100008: bikeFront
+    100010: bikeSteer
+    100012: bikeSteerTop
+    100014: camera1
+    100016: crystals
+    100018: directionalLight1
+    100020: directionalLight2
+    100022: glassTop1
+    100024: handlebar
+    100026: LHover
+    100028: pCube1
+    100030: pCube2
+    100032: pCube3
+    100034: pCube4
+    100036: pCube5
+    100038: pCube6
+    100040: pipe
+    100042: RHover
+    100044: Seat
+    400000: //RootNode
+    400002: bike_v02:Mesh
+    400004: bikeBack
+    400006: bikeCrystalCrate
+    400008: bikeFront
+    400010: bikeSteer
+    400012: bikeSteerTop
+    400014: camera1
+    400016: crystals
+    400018: directionalLight1
+    400020: directionalLight2
+    400022: glassTop1
+    400024: handlebar
+    400026: LHover
+    400028: pCube1
+    400030: pCube2
+    400032: pCube3
+    400034: pCube4
+    400036: pCube5
+    400038: pCube6
+    400040: pipe
+    400042: RHover
+    400044: Seat
+    2000000: camera1
+    2100000: lam_purpleCrystal
+    2100002: lam_blueCrystal
+    2100004: glassTop
+    2100006: bike_v03_gray
+    2100008: bike_v03_dusty_yellow
+    2100010: bike_v03_dark_yellow
+    2300000: bikeBack
+    2300002: bikeCrystalCrate
+    2300004: bikeFront
+    2300006: bikeSteer
+    2300008: bikeSteerTop
+    2300010: glassTop1
+    2300012: handlebar
+    2300014: LHover
+    2300016: pCube1
+    2300018: pCube2
+    2300020: pCube3
+    2300022: pCube4
+    2300024: pCube5
+    2300026: pCube6
+    2300028: pipe
+    2300030: RHover
+    2300032: Seat
+    3300000: bikeBack
+    3300002: bikeCrystalCrate
+    3300004: bikeFront
+    3300006: bikeSteer
+    3300008: bikeSteerTop
+    3300010: glassTop1
+    3300012: handlebar
+    3300014: LHover
+    3300016: pCube1
+    3300018: pCube2
+    3300020: pCube3
+    3300022: pCube4
+    3300024: pCube5
+    3300026: pCube6
+    3300028: pipe
+    3300030: RHover
+    3300032: Seat
+    4300000: pCube1
+    4300002: pCube2
+    4300004: pCube3
+    4300006: pCube4
+    4300008: pCube5
+    4300010: pCube6
+    4300012: glassTop1
+    4300014: bikeCrystalCrate
+    4300016: RHover
+    4300018: pipe
+    4300020: Seat
+    4300022: bikeBack
+    4300024: handlebar
+    4300026: bikeSteerTop
+    4300028: bikeSteer
+    4300030: bikeFront
+    4300032: LHover
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: directionalLight1
+    10800002: directionalLight2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
