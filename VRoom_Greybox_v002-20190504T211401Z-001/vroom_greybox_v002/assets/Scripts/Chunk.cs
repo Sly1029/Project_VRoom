@@ -13,7 +13,10 @@ public class Chunk : MonoBehaviour
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("chunkable");
         taggedObjsInScene = new List<GameObject>(objs);
-
+        // foreach (GameObject x in taggedObjsInScene){
+        //      Debug.Log(x);
+        // }
+       
     }
 
     // Update is called once per frame

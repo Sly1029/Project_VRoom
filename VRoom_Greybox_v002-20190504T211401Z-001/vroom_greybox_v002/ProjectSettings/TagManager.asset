@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - chunkable
   - viewer
+  - chunkable
   layers:
   - Default
   - TransparentFX
