@@ -1,23 +1,21 @@
 fileFormatVersion: 2
-guid: def3edaa49884d64a8f1c66d6d6490d4
+guid: ca6d3853c3abc48469142b8982ae1775
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: PATH
-    100002: Path_Curve
-    100004: StartMarkerCenter
-    100006: //RootNode
-    400000: PATH
-    400002: Path_Curve
-    400004: StartMarkerCenter
-    400006: //RootNode
+    100000: crystal
+    100002: note
+    100004: //RootNode
+    400000: crystal
+    400002: note
+    400004: //RootNode
     2100000: lambert1
-    2300000: PATH
-    2300002: StartMarkerCenter
-    3300000: PATH
-    3300002: StartMarkerCenter
-    4300000: PATH
-    4300002: StartMarkerCenter
+    2300000: crystal
+    2300002: note
+    3300000: crystal
+    3300002: note
+    4300000: note
+    4300002: crystal
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -37,7 +35,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -49,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1

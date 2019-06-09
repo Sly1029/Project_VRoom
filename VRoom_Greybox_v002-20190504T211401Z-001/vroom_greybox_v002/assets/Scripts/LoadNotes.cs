@@ -45,7 +45,6 @@ public class LoadNotes : MonoBehaviour
             GameObject audio_prefab = prefabSpawn;
             AudioSource audio = audio_prefab.GetComponent<AudioSource>();
             var x = Resources.Load<AudioClip>("Music/"+n.file);
-            Debug.Log(x);
             audio.clip = x;
             try
             {
@@ -87,7 +86,7 @@ public class LoadNotes : MonoBehaviour
             if (!values[0].StartsWith("0")){
             //Gets the seconds representation of the X:xx time format
               time_value+=60*int.Parse(values[0][0]+"");
-              Debug.Log(time_value);
+              //Debug.Log(time_value);
             }
 
             notes.Add(new Note(time_value, values[1], values[2][0]));
