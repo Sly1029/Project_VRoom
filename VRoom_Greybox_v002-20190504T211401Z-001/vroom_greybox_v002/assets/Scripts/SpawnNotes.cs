@@ -17,7 +17,6 @@ public List<string>data = new List<string>();
 
 public class SpawnNotes : MonoBehaviour
 {
-
     public GameObject noteGeneric;
     float startTime;
 
@@ -45,7 +44,7 @@ public class SpawnNotes : MonoBehaviour
     void SaveVectors()
     {
      BinaryFormatter bf = new BinaryFormatter();
-     FileStream file = File.Create(Directory.GetCurrentDirectory() + @"\assets\resources\notepossiblelocations.save");
+     FileStream file = File.Create(Directory.GetCurrentDirectory() + @"\assets\resources\notepossiblelocations_hilltrack.save");
      Vector3Data vectordata = new Vector3Data();
      foreach(Vector3 x in noteLocations){
         vectordata.data.Add(x.x+","+x.y+","+x.z);
@@ -57,10 +56,10 @@ public class SpawnNotes : MonoBehaviour
     file.Close();    
     ReadVectors();
     }
-
+    
     public static  Vector3Data ReadVectors(){
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Directory.GetCurrentDirectory()+@"\assets\resources\notepossiblelocations.save", FileMode.Open);
+        FileStream file = File.Open(Directory.GetCurrentDirectory()+ @"\assets\resources\notepossiblelocations_hilltrack.save", FileMode.Open);
         Vector3Data vec = (Vector3Data)bf.Deserialize(file);
         Debug.Log(vec.data[0]);
         file.Close();
