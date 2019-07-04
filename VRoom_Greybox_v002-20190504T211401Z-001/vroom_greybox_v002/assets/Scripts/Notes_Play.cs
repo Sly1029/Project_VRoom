@@ -28,5 +28,10 @@ public class Notes_Play : MonoBehaviour
         Debug.Log("Hit");   
 
        other.GetComponentInParent<AudioSource>().Play();
+      MeshFilter[] childMeshes =  other.GetComponentsInChildren<MeshFilter>();
+      foreach (MeshFilter mesh in childMeshes)
+      {
+          mesh.sharedMesh = null;
+      }
     }
 }

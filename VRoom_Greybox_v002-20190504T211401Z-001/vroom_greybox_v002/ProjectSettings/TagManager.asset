@@ -6,6 +6,8 @@ TagManager:
   tags:
   - viewer
   - chunkable
+  - bound
+  - notes
   layers:
   - Default
   - TransparentFX
