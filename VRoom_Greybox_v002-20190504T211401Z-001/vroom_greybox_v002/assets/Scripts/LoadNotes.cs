@@ -48,7 +48,7 @@ public class LoadNotes : MonoBehaviour
             audio.clip = x;
             try
             {
-                currentVector.y += 0.5f;
+                currentVector.y += 2f;
                 if (n.path == 'r' || n.path == 'R')
                 {
                     currentVector.z += offset;
