@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using System;
 //@author Rohit Jayaram
 public class LoadNotes : MonoBehaviour
 {
-    public GameObject prefabSpawn;
+    public GameObject audio_prefab_middle, audio_prefab_left,audio_prefab_right;
     public int offset;
     // Start is called before the first frame update
 
@@ -42,26 +43,39 @@ public class LoadNotes : MonoBehaviour
         Vector3 currentVector;
         foreach (Note n in notes){
             currentVector = locations[(n.time/2)+1];
-            GameObject audio_prefab = prefabSpawn;
-            AudioSource audio = audio_prefab.GetComponent<AudioSource>();
+            
+            
             var x = Resources.Load<AudioClip>("Music/"+n.file);
-            audio.clip = x;
+            
             try
             {
                 currentVector.y += 2f;
                 if (n.path == 'r' || n.path == 'R')
                 {
+                    AudioSource audio = audio_prefab_right.GetComponent<AudioSource>();
                     currentVector.z += offset;
+                    audio.clip = x;
+                    Instantiate(audio_prefab_right, currentVector, Quaternion.identity);
+                    
                 }
                 else if (n.path == 'l' || n.path == 'L')
                 {
                     currentVector.z -= offset;
+                    AudioSource audio = audio_prefab_left.GetComponent<AudioSource>();
+                     audio.clip = x;
+                    Instantiate(audio_prefab_left, currentVector, Quaternion.identity);
+                   
+                }
+                else{
+                    AudioSource audio = audio_prefab_middle.GetComponent<AudioSource>();
+                    audio.clip = x;
+                    Instantiate(audio_prefab_middle, currentVector, Quaternion.identity);
+                    
                 }
 
-
-                Instantiate(audio_prefab, currentVector, Quaternion.identity);
+                
             }
-            catch{
+            catch(Exception E){
                 Debug.Log("Error");
             }
 

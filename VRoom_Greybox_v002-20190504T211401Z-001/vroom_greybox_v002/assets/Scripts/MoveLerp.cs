@@ -16,6 +16,7 @@ public class MoveLerp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.rotation = transform.parent.rotation;
         if (Input.GetKey(KeyCode.A))
         {
             //Vector3 localPosOffset = new Vector3(transform.parent.position.x , transform.parent.position.y+3f, transform.parent.position.z - bounds);
